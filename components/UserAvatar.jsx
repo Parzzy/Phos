@@ -11,7 +11,7 @@ export default function UserAvatar() {
           height={32}
           className="rounded-full"
         />
-        <span className="text-sm hidden lg:inline font-medium text-zinc-700">Parzzy</span>
+        <span className="text-sm hidden lg:inline font-medium text-zinc-200">Parzzy</span>
       </Link>
     </div>
   );

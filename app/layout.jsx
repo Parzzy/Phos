@@ -1,6 +1,6 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "../components/Header";
+import ClientHeader from "../components/ClientHeader";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -19,8 +19,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${roboto.variable} antialiased text-zinc-950 bg-zinc-200 pb-16 md:pb-0`}
       >
-        <Header />
-        {children}
+        <ClientHeader />
+        <main>{children}</main>
       </body>
     </html>
   );

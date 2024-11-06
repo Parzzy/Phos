@@ -9,9 +9,9 @@ export default function Navbar() {
     <nav className="flex justify-between md:justify-center items-center gap-4 md:gap-12 min-w-full md:min-w-fit text-zinc-200 fixed bottom-0 md:relative md:bottom-auto bg-zinc-950 p-2">
       <Link
         className={`${isHovered} ${
-          pathname === "/" ? "text-xl font-bold" : ""
+          pathname === "/home" ? "text-xl font-bold" : ""
         }`}
-        href="/"
+        href="/home"
       >
         Home
       </Link>

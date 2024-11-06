@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Profile() {
   // This would normally come from a database/auth
   const mockUserData = {
-    name: "Parzzy Smith", // Full name example
+    name: "Joe Goldberg", // Full name example
     questionsPosted: 15,
     avatarUrl: "/avatarbg.png", // Using the same avatar as in UserAvatar component
   };
@@ -15,8 +15,8 @@ export default function Profile() {
   const questions = Data();
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-4rem)] min-w-[100vw]">
-      <div className="flex gap-24 items-center justify-center min-w-[75%] min-h-[50vh] bg-zinc-50 rounded-xl p-16">
-        <div className="flex flex-col items-center justify-center w-[30%]">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-24 items-center justify-center w-[90%] md:w-[75%] min-h-[50vh] bg-zinc-50 rounded-xl p-2 md:p-16 mt-4 md:mt-0">
+        <div className="flex flex-col items-center justify-center w-full md:w-[30%]">
           <Image
             src={mockUserData.avatarUrl}
             alt="Profile Avatar"
@@ -34,8 +34,8 @@ export default function Profile() {
             Edit Profile
           </button>
         </div>
-        <div className="flex flex-col gap-4 items-start justify-center w-[70%]">
-          <h2 className="text-3xl font-bold text-zinc-900">Recent Questions</h2>
+        <div className="flex flex-col gap-4 items-start justify-center w-full md:w-[70%]">
+          <h2 className="text-3xl font-bold text-zinc-900 ml-4 md:ml-0">Recent Questions</h2>
           {questions.map((question, index) => (
             <Link
               href={`/question/${question.id}`}
